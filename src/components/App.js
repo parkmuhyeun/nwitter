@@ -9,6 +9,7 @@ function App() {
     authService.onAuthStateChanged((user) => {                    //Every time userupdate
       if(user){
         setUserObj({
+          photoURL: user.photoURL,
           displayName: user.displayName,
           uid: user.uid,
           updateProfile: (args) => user.updateProfile(args),
@@ -22,6 +23,7 @@ function App() {
   const refreshUser = () => {                                    //userupdate
     const user = authService.currentUser
     setUserObj({
+      photoURL: user.photoURL,
       displayName: user.displayName,
       uid: user.uid,
       updateProfile: (args) => user.updateProfile(args),
