@@ -39,6 +39,7 @@ const Nweet = ({nweetObj, isOwner}) => {
                     value={newNweet}
                     required 
                     onChange={onChange}
+                    className = "formInput"
                     />
                     <input type="submit" value="Update Nweet" className="formBtn"/>
             </form>
